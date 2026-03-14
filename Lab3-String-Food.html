@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="trimfn()">Submit</button>
+    <p id="demo"></p>
+
+    <script>
+        function trimfn(){
+    var str = " I loved the FOOD and the service!  ";
+    var output = str.trim();
+    var lower = str.toLowerCase();
+    var replace = str.replace("FOOD", "ambience");
+    var position = str.indexOf("service");
+    var array = str.split(" ");
+    document.getElementById("demo").innerHTML = output + "<br>" +lower + "<br>" + replace + "<br>" + position + "<br>" + array;
+
+    
+
+        }
+        
+
+    </script>
+</body>
+</html>

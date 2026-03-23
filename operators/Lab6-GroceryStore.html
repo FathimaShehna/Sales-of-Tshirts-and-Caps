@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+</head>
+<body>
+    <script>
+        var productNames = ["Apple", "Banana", "Carrot", "Onion"];
+        var prices = [20,100,150,90];
+        //var final = productNames.concat(prices);
+
+        let productList= [];
+
+        for (let i=0; i<productNames.length; i++) {
+            productList.push('Product: ' + productNames[i] + ' - Price: ' + prices[i]);
+        }
+        
+        console.log(productList);
+
+        for (let i=0; i<productList.length; i++) {
+            if (prices[i] > 50) {
+                console.log(productList[i]);
+            }
+        }
+
+        productNames.push("WaterMelon");
+        prices.push(80);
+
+        let updatedList = [];
+        for (let i=0; i<productNames.length; i++) {
+            updatedList.push('Product: ' + productNames[i] + ' - Price: ' + prices[i]);
+        }
+
+        console.log(updatedList);
+        
+    </script>
+</body>
+</html>

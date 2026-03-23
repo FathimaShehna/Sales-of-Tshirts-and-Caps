@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+    <script>
+    let student = ["Alice","Bob","Charlie","David"];
+
+        let score = [30, 92, 78, 90];
+
+        for(let i=0; i<student.length; i++) {
+            if(score[i]>60)
+            console.log(student[i]);
+        }
+
+        let total = 0;
+        for (let i = 0; i < student.length; i++) {
+        total += score[i];
+            }
+        console.log("Total Score:", total);
+
+        for (let i = 0; i < student.length; i++) {
+         if (score[i] >= 35) {
+            console.log(student[i]);
+  }
+}
+
+        for (let i = 0; i < student.length; i++) {
+                if (score[i] >= 90) {
+                    console.log(student[i]);
+        }
+        }
+
+        function descending() {
+        score.sort(function(a, b){return b - a});
+        console.log(score);
+        }
+
+        descending();
+
+    </script>
+    
+</html>

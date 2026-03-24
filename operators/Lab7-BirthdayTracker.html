@@ -16,13 +16,11 @@
              "July", "August", "September", "October", "November", "December"];
             var monthName = months[dat.getMonth()];
             var day = dat.getDate();
-           // return { year: year, month: monthName, day: day };
 
             var findAge = new Date();
             let age = findAge.getFullYear() - year;
-            //  return {current_age: age};
               
-            console.log(friendObj.name + " was born on " + monthName + " " + day + ", " + year + " and is currently " + age + " years old.");
+            console.log(friendObj.name + " was born on " +  day + " " +  monthName + ", " + "and is " + age + " years old.");
         }
 
         getBirthdayDetails(friend);

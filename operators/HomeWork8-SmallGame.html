@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let chances = 0;
+
+while (chances < 5) {
+
+    let input = parseInt(prompt("Enter a number between 1 and 5:"));
+
+    let numberWord = "";
+    switch (input) {
+        case 1:
+            numberWord = "One";
+            break;
+        case 2:
+            numberWord = "Two";
+            break;
+        case 3:
+            numberWord = "Three";
+            break;
+        case 4:
+            numberWord = "Four";
+            break;
+        case 5:
+            numberWord = "Five";
+            break;
+    }
+
+    console.log("You entered: " + numberWord);
+
+    if (input === 3) {
+        console.log("You guessed it right!");
+        break; 
+    } else {
+        console.log("Wrong guess. Try again.");
+    }
+
+    chances++;
+}
+
+if (chances === 5) {
+    console.log("Game over");
+}
+
+</script>
+
+</body>
+</html>

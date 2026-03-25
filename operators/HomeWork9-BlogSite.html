@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Site</title>
+</head>
+<body>
+    <script>
+        //comment
+        var str =  "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+    var badWord = /(bad|ugly|stupid)/gi;   //find any of the words are present
+    var result = str.match(badWord);       //make a new comment with the bad words  
+    console.log(result);
+
+    var hasBadWord = str.replace(badWord,"***");  //replace the bad words with ***
+    console.log(hasBadWord);                      //new comment
+
+    var countnum = str.match(/\d/g);              //shows the digits present in the comment
+    console.log(countnum);
+
+    console.log(countnum.length);                   //count the total number of digits in the comment  
+
+    let wordCount = hasBadWord.match(/[A-Z]/g);     //count and shows the words that start with capital letters in the comment
+    console.log(wordCount);
+
+    </script>
+</body>
+</html>

@@ -25,6 +25,12 @@
              let diff = diffYear.getFullYear() - eventYear;
 
              console.log(month + " " + eventday + ", " + eventYear + " and is in " + diff + " years.");
+
+             if (diff  >1) {
+                console.log("It has been more than a year since that date.");
+             } else {
+                console.log("It has been less than a year since that date.");
+             }
         }
         checkdate();
     </script>

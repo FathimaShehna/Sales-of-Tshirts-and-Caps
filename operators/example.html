@@ -1,31 +1,19 @@
-
 <!DOCTYPE html>
 <html>
 <body>
-
-<h2>JavaScript "this"</h2>
-
-<p>This example demonstrate that in a regular function, the "this" keyword represents different objects depending on how the function was called.</p>
-
-<p>Click the button to execute the "hello" function again, and you will see that this time "this" represents the button object.</p>
-
-<button id="btn">Click Me!</button>
-
-<p id="demo"></p>
-
+ 
 <script>
-var func;
+let arr = [ ["1","Red"],8, ["2", "Green"],["3", "Blue"],9, ["4","Yellow"],["5","Orange"]];
+// console.log(arr);
+console.log(arr[0]);
+console.log(arr[0, 0]);
+console.log(arr[0,1,0])
+console.log(arr[0, 1]);
+console.log(arr[0,0,0]);
+console.log(arr[0,4]);
+console.log(arr[1,1,1,1]);
 
-func = function() {
-  document.getElementById("demo").innerHTML += this;
-}
-
-//The window object calls the function:
-window.addEventListener("load", func);
-
-//A button object calls the function:
-document.getElementById("btn").addEventListener("click", func);
 </script>
 
 </body>
-</html>
+</html> 

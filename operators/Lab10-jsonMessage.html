@@ -18,16 +18,14 @@
         var messagePrint;
 
         messagePrint = () => {       //using arrow function
-         //   console.log("Message received from " + details.name + " is: " +details.message);
         try {               //error handling
-            messagePrint();
+            console.log("Message received from " + details.name + " is: " +details.message);
         } catch (error) {
             console.error("An error occurred");
         }
         }
 
         messagePrint();
-
 
     </script>
 </body>

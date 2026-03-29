@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+</head>
+<body>
+    <form id="form">
+  <input type="text" id="input" placeholder="Enter text">
+  <button type="submit">Submit</button>
+</form>
+
+<p id="demo"></p>
+
+<script>
+  document.getElementById("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+
+    let text = document.getElementById("input").value;
+    let output = document.getElementById("demo");
+
+    output.textContent = text;
+    output.style.color = "blue";
+
+    output.addEventListener ("mouseover", function() {
+    output.style.color = "green";
+     })
+
+  output.addEventListener ("mouseout", function() {
+    output.style.color = "blue";
+     })
+  });
+
+</script>
+</body>
+</html>

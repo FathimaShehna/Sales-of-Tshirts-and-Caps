@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+
+    <form id="form">
+  <input type="text" id="nameInput" placeholder="Enter your Name">
+  <br>
+  <textarea id="fdInput" placeholder="Enter your Feedback here"></textarea>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="confirm"></p>
+
+<script>
+
+    let form = document.getElementById("form");
+    let userName = document.getElementById("demo");
+    let fdBox = document.getElementById("demo1");
+    let message = document.getElementById("confirm");
+
+    form.addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+
+    let name = document.getElementById("nameInput").value;
+    let feedback = document.getElementById("fdInput").value;
+
+    userName.textContent = name;
+    fdBox.textContent = feedback;
+
+    //confirm("Thanks for your feedback!");
+    message.textContent = "Thanks for your feedback!";
+    message.style.color = "green";
+    setTimeout(function() {
+        message.textContent = "";
+    }, 5000);
+    });
+    
+    fdBox.addEventListener ("mouseover", function() {
+    fdBox.style.color = "blue";
+     })
+
+    fdBox.addEventListener ("mouseout", function() {
+    fdBox.style.color = "black";
+   });
+</script>
+</body>
+</html>
